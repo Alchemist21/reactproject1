@@ -4,12 +4,13 @@ import './App.css';
 import Button from 'react-bootstrap/Button';
 import Navbar from 'react-bootstrap/Navbar';
 
+
 function App() {
   return (
 
     <div className="App">
-    <>
-    
+ <>
+  
   <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="#home">
       <img
@@ -23,7 +24,6 @@ function App() {
     </Navbar.Brand>
   </Navbar>
 </>
-
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -39,6 +39,10 @@ function App() {
          Medtechsolutions
         </a>
       </header>
+
+      
+
+
     </div>
   );
 }
