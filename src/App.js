@@ -1,48 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Button from 'react-bootstrap/Button';
-import Navbar from 'react-bootstrap/Navbar';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+import Dashboard from './components/Dashboard';
+import User from './components/User';
+import Nav from './components/Nav';
 
 function App() {
   return (
-
     <div className="App">
- <>
-  
-  <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home">
-      <img
-        alt=""
-        src="/logo.svg"
-        width="30"
-        height="30"
-        className="d-inline-block align-top"
-      />
-      {' Home'}
-    </Navbar.Brand>
-  </Navbar>
-</>
-
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-         Emerging Healthcare Technology
-        </p>
-        <a
-          className="App-link"
-          href="https://medtechsolutions.io"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-         Medtechsolutions
-        </a>
-      </header>
-
+      <Router>
+        <Nav />
+        <Route exact path="/" component={Dashboard} />
+        <Route exact path="/user" component={User} />
+      </Router>
       
-
-
     </div>
   );
 }
